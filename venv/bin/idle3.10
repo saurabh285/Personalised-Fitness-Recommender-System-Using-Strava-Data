@@ -1,0 +1,5 @@
+#!/Users/saurabhsingh/Desktop/Personalised-Fitness-Recommender-System-Using-Strava-Data/venv/bin/python3.10
+
+from idlelib.pyshell import main
+if __name__ == '__main__':
+    main()

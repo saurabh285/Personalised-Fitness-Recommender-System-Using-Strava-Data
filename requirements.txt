@@ -1,0 +1,15 @@
+pandas
+numpy
+scikit-learn
+scipy
+matplotlib
+seaborn
+streamlit
+requests
+tqdm
+unidecode
+scikit-surprise   # For collaborative filtering
+flask
+dotenv
+google-generativeai
+genai

@@ -1,0 +1,13 @@
+prefix=/Users/saurabhsingh/Desktop/Personalised-Fitness-Recommender-System-Using-Strava-Data/venv
+exec_prefix=/Users/saurabhsingh/Desktop/Personalised-Fitness-Recommender-System-Using-Strava-Data/venv
+libdir=/Users/saurabhsingh/Desktop/Personalised-Fitness-Recommender-System-Using-Strava-Data/venv/lib
+sharedlibdir=/Users/saurabhsingh/Desktop/Personalised-Fitness-Recommender-System-Using-Strava-Data/venv/lib
+includedir=/Users/saurabhsingh/Desktop/Personalised-Fitness-Recommender-System-Using-Strava-Data/venv/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
