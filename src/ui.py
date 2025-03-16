@@ -41,7 +41,7 @@ if option == "Strava API":
         refresh_token = st.session_state["user_tokens"].get("current_user")
 
         if refresh_token:
-            st.write(f"✅ Using Refresh Token: `{refresh_token}`")
+            # st.write(f"✅ Using Refresh Token: `{refresh_token}`")
 
             with st.spinner("Fetching Strava Data..."):
                 df = fetch_strava_activities(refresh_token)
@@ -50,7 +50,7 @@ if option == "Strava API":
                     st.error("❌ No data found. Please check your Strava account.")
                 else:
                     st.success("✅ Successfully imported workouts!")
-                    st.write("🔍 DEBUG: Data Loaded")
+                    # st.write("🔍 DEBUG: Data Loaded")
                     
                     # 🏋️ **Step 1️⃣: Allow User to Choose Activity Type**
                     activity_types = ["All", "Run", "Walk"]
@@ -92,11 +92,7 @@ if df is not None and not df.empty:
     st.subheader("📊 AI Workout Analysis")
     
     # User selects an activity type
-    selected_activity_type = st.selectbox(
-        "Select Activity Type for Analysis:",
-        ["All", "Run", "Walk"]
-    )
-    
+  
     if st.button("Analyze My Workouts with AI"):
         with st.spinner("Analyzing your workouts..."):
             # Filter the dataset based on the selected activity type
