@@ -1,12 +1,19 @@
-from src.data_loader import fetch_strava_activities
+import os
+import subprocess
+from dotenv import load_dotenv
 
-# Ask user for their refresh token
-user_refresh_token = input("Enter your Strava refresh token: ")
+# Load environment variables
+load_dotenv()
 
-# Fetch and display activities
-activities = fetch_strava_activities(user_refresh_token)
+# Step 1️⃣: Start Flask Backend (Authentication API)
+flask_command = "python src/auth.py"  # ✅ Updated to reflect src folder
+print("🚀 Starting Flask Backend for Authentication...")
+flask_process = subprocess.Popen(flask_command, shell=True)
 
-if activities:
-    print("Fetched User Activities:", activities[:3])  # Show first 3 activities
-else:
-    print("Failed to fetch activities!")
+# Step 2️⃣: Start Streamlit UI
+streamlit_command = "streamlit run src/ui.py --server.port 8501 --server.address 0.0.0.0"
+print("🚀 Starting Streamlit UI on port 8501...")
+subprocess.run(streamlit_command, shell=True)
+
+# Step 3️⃣: Keep the Flask API running
+flask_process.wait()
