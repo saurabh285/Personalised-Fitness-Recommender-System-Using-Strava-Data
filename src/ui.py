@@ -16,7 +16,7 @@ from agents import ai_workout_analyzer, ai_training_planner
 load_dotenv()
 
 # UI Setup
-st.title("🚴‍♂️ AI-Powered Fitness Recommender & Performance Predictor")
+st.title("🚴‍♂️ AI-Powered Fitness Recommender: Smarter Training with Strava Data")
 
 # Store refresh tokens per user
 if "user_tokens" not in st.session_state:

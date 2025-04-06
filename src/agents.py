@@ -58,7 +58,7 @@ def ai_training_planner(user_goal, activity_type="General"):
     The user wants to achieve: {user_goal}
     
     - {training_guidance}
-    - Provide a **4-week** structured training schedule.
+    - A structured training schedule.
     - Include recommended workout types (e.g., interval training, endurance sessions, strength training).
     - Define intensity levels and weekly progression strategies.
     - Suggest recovery and injury prevention techniques.
